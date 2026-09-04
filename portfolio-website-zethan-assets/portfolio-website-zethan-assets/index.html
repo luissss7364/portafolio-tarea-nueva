@@ -16,35 +16,35 @@
     <title>Portfolio website guillermo</title>
   </head>
   <body>
-    <!--=============== HEADER ===============-->
-    <header class="header">
+    <!--=============== HEADER ===============-->¡
+    <header class="header" id="header">
       <nav class="nav container">
-        <a href="#" class="nav-logo">zethan</a>
+        <a href="#" class="nav-logo">luis, guillermo</a>
         
         <div class="nav-menu">
           <ul class="nav-list">
             <li class="nav-item">
-              <a href="#" class="nav-link active-link">home</a>
+              <a href="#home" class="nav-link active-link">inicio</a>
             </li>
 
             <li class="nav-item">
-              <a href="#" class="nav-link">about</a>
+              <a href="#about" class="nav-link">acerca de</a>
             </li>
 
             <li class="nav-item">
-              <a href="#" class="nav-link">servicio</a>
+              <a href="#services" class="nav-link">servicio</a>
             </li>
 
             <li class="nav-item">
-              <a href="#" class="nav-link">skills</a>
+              <a href="#skills" class="nav-link">habilidades</a>
             </li>
 
             <li class="nav-item">
-              <a href="#" class="nav-link">porfolio</a>
+              <a href="#work" class="nav-link">portafolio</a>
             </li>
 
             <li class="nav-item">
-              <a href="#" class="nav-link">contacto</a>
+              <a href="#contact" class="nav-link">contacto</a>
             </li>
           </ul>
 
@@ -64,7 +64,7 @@
     <!--=============== MAIN ===============-->
     <main class="main">
       <!--=============== HOME ===============-->
-      <section class="home section">
+      <section class="home section" id="home">
         <div class="home-container container grid">
           <div class="home-data">
            
@@ -116,7 +116,7 @@
       </section>
 
       <!--=============== ABOUT ===============-->
-      <section class="about section">
+      <section class="about section" id="about">
         <div class="about-container container grid">
           <div class="about-experencia">
             <span class="about-no"><count-up>1</count-up></span>
@@ -151,7 +151,7 @@
       </section>
 
       <!--=============== SERVICES ===============-->
-      <section class="services section">
+      <section class="services section" id="services">
         <h2 class="section-title">Mi servicios</h2>
         <div class="services-container container grid">
           <article class="services-card">
@@ -178,7 +178,7 @@
       </section>
 
       <!--=============== SKILLS ===============-->
-      <section class="skills section">
+      <section class="skills section" id="skills">
         <h2 class="section-title">Mis habilidades</h2>
 
         <div class="skills-container container grid">
@@ -356,14 +356,205 @@
       </section>
 
       <!--=============== PORTFOLIO ===============-->
-      <section class="work section" id="works"></section>
+      <section class="work section" id="work">
+        <h2 class="section-title">portafolio</h2>
+
+        <div class="container">
+          <ul class="work-list">
+            <li class="work-item active-work" data-filter="all">todo</li>
+            <li class="work-item" data-filter=".photography">photograph</li>
+            <li class="work-item" data-filter=".development">Development</li>
+            <li class="work-item" data-filter=".branding">Branding</li>
+          </ul>
+
+          <div class="work-container grid">
+            <div class="mix branding">
+              <article class="work-card">
+                <img src="assets/img/project-1.jpeg" alt="" class="work-img">
+
+                <h4 class="work-category">Branding</h4>
+                <h3 class="work-title">Zorro</h3>
+                <p class="work-description">El dolor mismo es amor, el objetivo principal, un aprendizaje selectivo conectado, pero haciéndolo de tal manera que ocurra un trabajo y dolor prolongados.</p>
+
+                <a href="g" class="work-link">
+                  visitar proyecto <i class="ri-arrow-right-line work-icon"></i>
+                </a>
+              </article>            
+            </div>
+
+            <div class="mix development">
+              <article class="work-card">
+                <img src="assets/img/project-2.jpg" alt="" class="work-img">
+
+                <h4 class="work-category">Development</h4>
+                <h3 class="work-title">Explore</h3>
+                <p class="work-description">El dolor mismo es amor, el objetivo principal, un aprendizaje selectivo conectado, pero haciéndolo de tal manera que ocurra un trabajo y dolor prolongados.</p>
+
+                <a href="g" class="work-link">
+                  visitar proyecto <i class="ri-arrow-right-line work-icon"></i>
+                </a>
+              </article>            
+            </div>
+
+            <div class="mix photography">
+              <article class="work-card">
+                <img src="assets/img/project-3.jpeg" alt="" class="work-img">
+
+                <h4 class="work-category">Photography</h4>
+                <h3 class="work-title">Mozar</h3>
+                <p class="work-description">El dolor mismo es amor, el objetivo principal, un aprendizaje selectivo conectado, pero haciéndolo de tal manera que ocurra un trabajo y dolor prolongados.</p>
+
+                <a href="g" class="work-link">
+                  visitar proyecto <i class="ri-arrow-right-line work-icon"></i>
+                </a>
+              </article>            
+            </div>
+
+            <div class="mix photography">
+              <article class="work-card">
+                <img src="assets/img/project-4.jpeg" alt="" class="work-img">
+
+                <h4 class="work-category">Photography</h4>
+                <h3 class="work-title">Gooir</h3>
+                <p class="work-description">El dolor mismo es amor, el objetivo principal, un aprendizaje selectivo conectado, pero haciéndolo de tal manera que ocurra un trabajo y dolor prolongados.</p>
+
+                <a href="g" class="work-link">
+                  visitar proyecto <i class="ri-arrow-right-line work-icon"></i>
+                </a>
+              </article>            
+            </div>
+
+            <div class="mix development">
+              <article class="work-card">
+                <img src="assets/img/project-5.jpg" alt="" class="work-img">
+
+                <h4 class="work-category">Development</h4>
+                <h3 class="work-title">Stay Fit</h3>
+                <p class="work-description">El dolor mismo es amor, el objetivo principal, un aprendizaje selectivo conectado, pero haciéndolo de tal manera que ocurra un trabajo y dolor prolongados.</p>
+
+                <a href="g" class="work-link">
+                  visitar proyecto <i class="ri-arrow-right-line work-icon"></i>
+                </a>
+              </article>            
+            </div>
+          </div>
+        </div>
+      </section>
 
       <!--=============== CONTACT ===============-->
-      <section class="contact section" id="contact"></section>
-    </main>
 
-    <!--=============== FOOTER ===============-->
-    <footer class="footer"></footer>
+      <main>
+  <section class="contact section" id="contact">
+    <div class="contact-container container grid">
+      <div class="contact-group">
+        <h2 class="section-title contact-section-title">Hablemos de <br>
+          tu proyecto
+        </h2>
+
+        <div class="contact-data grid">
+          <div class="contact-item">
+            <span class="contact-icon">
+              <i class="ri-mail-send-line"></i>
+            </span>
+
+            <div>
+              <h3 class="contact-title">E-mail</h3>
+              <p class="contact-description">luishagh743@gmail.com</p>
+            </div>
+          </div>
+
+          <div class="contact-item">
+            <span class="contact-icon">
+              <i class="ri-whatsapp-fill"></i>
+            </span>
+
+            <div>
+              <h3 class="contact-title">telefono-WhatsApp</h3>
+              <p class="contact-description">+58 4220371564</p>
+            </div>
+          </div>
+
+          <div class="contact-item">
+            <span class="contact-icon">
+              <i class="ri-map-pin-2-fill"></i>
+            </span>
+
+            <div>
+              <h3 class="contact-title">ubicacion</h3>
+              <p class="contact-description">123 maracaibo</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <form class="contact-form grid" id="contact-form">
+        <div class="contact-form-div">
+          <label for="" class="contact-label">nombre</label>
+          <input type="text" name="name" class="contact-input" id="contact-name">
+        </div>
+
+        <div class="contact-form-div">
+          <label for="" class="contact-label">Email</label>
+          <input type="email" name="email" class="contact-input" id="contact-email">
+        </div>
+
+        <div class="contact-form-div">
+          <label for="" class="contact-label">mensaje</label>
+          <textarea name="message" class="contact-input contact-area" id="contact-message">
+
+          </textarea>
+        </div>
+
+        <p class="contact-message" id="message"></p>
+        <button type="submit" class="button contact-button">enviar mensaje</button>
+
+      </form>
+    </div>
+  </section>
+</main>
+
+    <!--=============== FOOTER ===============--> 
+    <footer class="footer">
+      <div class="footer-container container">
+        <div class="footer-social">
+            <a href="https://www.linkedin.com/" 
+            target="_blank" 
+            class="footer-link">
+              <i class="ri-linkedin-line"></i>
+            </a>
+
+            <a href="https://instagram.com/" 
+            target="_blank" class="home-social-link">
+              <i class="ri-instagram-line"></i>
+            </a>
+
+            <a href="https://github.com/" 
+            target="_blank" 
+            class="footer-link">
+              <i class="ri-github-fill"></i>
+            </a>
+
+            <a href="https://wa.me/584220371564" 
+            target="_blank" class="home-social-link">
+              <i class="ri-whatsapp-fill"></i>
+            </a>
+
+            
+
+            
+          </div>
+
+          <p class="footer-copyright">
+            © 2026 <span>luis-guillermo</span>. <br>derechos reservados
+          </p>
+
+          <p class="footer-copyright">Developed by <span>Sajid</span>
+          </p>
+        
+      </div>
+    </footer>
+
+    
 
     <!--=============== GSAP ===============-->
     <script src="https://cdn.jsdelivr.net/npm/gsap@3.15/dist/gsap.min.js"></script>
@@ -379,10 +570,9 @@
     <script src="assets/js/mixitup.min.js"></script>
 
     <!--=============== EMAIL JS ===============-->
-    <script
-      type="text/javascript"
-      src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"
-    ></script>
+    <script type="text/javascript"
+          src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js">
+    </script>
 
     <!--=============== SCROLL REVEAL ===============-->
     <script src="https://unpkg.com/scrollreveal"></script>

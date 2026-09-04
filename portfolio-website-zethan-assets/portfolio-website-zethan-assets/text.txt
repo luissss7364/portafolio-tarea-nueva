@@ -145,12 +145,12 @@ Portfolio
 All
 Photography
 Development
-Branding
+Development
 
 .work-description
 Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore.
 
-.work-category | .work-title
+.work-category | .work-titlehttps://gemini.google.com/?hl=es-419
 Branding
 Zorro
 
