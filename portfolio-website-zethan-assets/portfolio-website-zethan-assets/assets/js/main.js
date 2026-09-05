@@ -1,3 +1,30 @@
+/*==================== MENU SHOW & HIDDEN ====================*/
+const navMenu = document.getElementById('nav-menu'),
+    navToggle = document.getElementById('nav-toggle'),
+    navClose = document.getElementById('nav-close');
+
+/*===== MENU SHOW =====*/
+if (navToggle) {
+    navToggle.addEventListener('click', () => {
+        navMenu.classList.add('show-menu');
+    });
+}
+
+/*======= MENU HIDDEN =======*/
+if (navClose) {
+    navClose.addEventListener('click', () => {
+        navMenu.classList.remove('show-menu');
+    });
+}
+
+/*==================== REMOVE MENU MOBILE ====================*/
+const navLink = document.querySelectorAll('.nav-link');
+
+const linkAction = () => {
+    navMenu.classList.remove('show-menu');
+};
+navLink.forEach(n => n.addEventListener('click', linkAction));
+
 /*==================== CHANGE BACKGROUND HEADER ====================*/
 const scrollHeader = () => {
     const header = document.getElementById('header');
@@ -24,7 +51,7 @@ const scrollActive = () => {
         );
 
         if (sectionClass) {
-            if(scrollY > sectionTop && scrollY < sectionTop + sectionHeight) {
+            if (scrollY > sectionTop && scrollY < sectionTop + sectionHeight) {
                 sectionClass.classList.add('active-link');
             } else {
                 sectionClass.classList.remove('active-link');
@@ -51,6 +78,33 @@ gsap.utils.toArray('.text-gradient').forEach((span) => {
     });
 });
 
+/*==================== DARK LIGHT THEME ====================*/
+window.addEventListener('DOMContentLoaded', () => {
+    const toggleBtn = document.getElementById('theme-toggle');
+
+    function applyTheme(theme) {
+        if (theme === 'light') {
+            document.body.classList.add('light-theme');
+            toggleBtn.classList.remove('ri-sun-line');
+            toggleBtn.classList.add('ri-moon-line');
+        } else {
+            document.body.classList.remove('light-theme');
+            toggleBtn.classList.add('ri-sun-line');
+            toggleBtn.classList.remove('ri-moon-line');
+        }
+
+        localStorage.setItem('theme', theme);
+    }
+
+    const savedTheme = localStorage.getItem('theme') || 'dark';
+    applyTheme(savedTheme);
+
+    toggleBtn.addEventListener('click', () => {
+        const isLight = document.body.classList.contains('light-theme');
+        applyTheme(isLight ? 'dark' : 'light');
+    });
+});
+
 /*==================== MIXITUP FILTER PORTFOLIO ====================*/
 var mixer = mixitup('.work-container', {
     selectors: {
@@ -62,32 +116,32 @@ var mixer = mixitup('.work-container', {
 });
 
 /* Active work */
-const linKWork = document.querySelectorAll('.work-item');
+const linkWork = document.querySelectorAll('.work-item');
 
 function activeWork() {
-    linKWork.forEach((a) => {
+    linkWork.forEach((a) => {
         a.classList.remove('active-work');
     });
 
     this.classList.add('active-work');
 }
 
-linKWork.forEach((a) => a.addEventListener('click', activeWork));
+linkWork.forEach((a) => a.addEventListener('click', activeWork));
 
 /*==================== EMAIL JS ====================*/
 const contactForm = document.getElementById('contact-form'),
-    contactname = document.getElementById('contact-name'),
+    contactName = document.getElementById('contact-name'),
     contactEmail = document.getElementById('contact-email'),
-    contactmessage = document.getElementById('contact-message'),
+    contactMessage = document.getElementById('contact-message'),
     message = document.getElementById('message');
 
 const sendEmail = (e) => {
     e.preventDefault();
 
     if (
-        contactname.value === '' || 
+        contactName.value === '' || 
         contactEmail.value === '' || 
-        contactmessage.value === ''
+        contactMessage.value === ''
     ) {
         message.textContent = 'Escribe todos los campos de entrada';
 
@@ -105,21 +159,40 @@ const sendEmail = (e) => {
         )
         .then(
             () => {
-                message.textContent = 'mensaje enviado';
+                message.textContent = 'Mensaje enviado correctamente';
 
                 setTimeout(() => {
                     message.textContent = '';
                 }, 3000);
             },
             (error) => {
-                alert('opp¡ algo salio mal..', error );
+                alert('¡Oops! Algo salió mal...', error);
             }
         );
 
-        contactname.value = '';
+        contactName.value = '';
         contactEmail.value = '';
-        contactmessage.value = '';
+        contactMessage.value = '';
     }
 };
 
 contactForm.addEventListener('submit', sendEmail);
+
+/*==================== SCROLL REVEAL ANIMATION  ====================*/
+const sr = ScrollReveal({
+    origin: 'top',
+    distance: '60px',
+    duration: 2500,
+    delay: 400
+});
+
+sr.reveal('.home-data');
+sr.reveal('.home-img-wrapper', {delay: 500});
+sr.reveal('.home-social', {delay: 600});
+sr.reveal('.services-card, .mix', { Interval: 100});
+sr.reveal('.skills-developer, .resume-left, .contact-group', { 
+    origin: 'left' 
+});
+sr.reveal('.skills-designer, .resume-right, .contact-form', { 
+    origin: 'right' 
+});
